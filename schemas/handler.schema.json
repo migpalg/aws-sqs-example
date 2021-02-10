@@ -1,0 +1,24 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Handler body schema",
+  "required": ["name", "age", "customerCode"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "User name",
+      "default": ""
+    },
+    "age": {
+      "type": "number",
+      "title": "User age",
+      "minimum": 0
+    },
+    "customerCode": {
+      "type": "string",
+      "title": "Customer unique code",
+      "pattern": "^[a-zA-Z0-9]+$"
+    }
+  }
+}

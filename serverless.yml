@@ -44,9 +44,9 @@ functions:
           path: enqueue
           method: POST
           cors: true
-          headers:
-            - Content-Type
-
+          request:
+            schema:
+              application/json: ${file(./schemas/handler.schema.json)}
 
   queue:
     handler: src/lambdas/queue/queue.handleQueueAction
@@ -57,7 +57,7 @@ functions:
             Fn::GetAtt:
               - SampleQueue
               - Arn
-          batchSize: 1
+          batchSize: 5 # Number of records in the queue batch
           enabled: true
 
 resources:
