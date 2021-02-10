@@ -1,0 +1,23 @@
+{
+  "name": "aws-sqs-test",
+  "version": "0.0.0",
+  "description": "Just a test for SQS with AWS Lambda",
+  "author": {
+    "name": "Miguel Palacio",
+    "url": "https://github.com/migpalg",
+    "email": "migpalg@gmail.com"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "deploy:dev": "sls deploy --stage dev",
+    "deploy": "sls deploy --stage production"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "serverless-plugin-optimize": "^4.1.4-rc.1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.841.0"
+  }
+}
